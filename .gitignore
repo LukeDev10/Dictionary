@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+UPDATE.txt
 
 # Ambiente virtual
 env/
