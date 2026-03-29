@@ -1,0 +1,29 @@
+# Python cache e arquivos compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambiente virtual
+env/
+venv/
+
+# Arquivos de logs e temporários
+*.log
+*.tmp
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações de IDE
+.vscode/
+.idea/
+
+# Arquivos sensíveis
+*.env
+
+# Distribuição/Builds
+build/
+dist/
+*.egg-info/
