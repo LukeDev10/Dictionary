@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 *.pyd
 UPDATE.txt
+words.json
 
 # Ambiente virtual
 env/

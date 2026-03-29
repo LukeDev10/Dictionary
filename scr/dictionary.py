@@ -6,14 +6,23 @@ print("\n-- Dictionary --\n\n- 'C' to close\n- 'L' to choose the language")
 
 language = "english"
 forbidden = r"0123456789\|/:;+*[]@#$%¨()£¢¬"
+words={"hi":"oi"}
 
 ARCHIVE = os.path.dirname(__file__)
 FOLDER = os.path.dirname(ARCHIVE)
 
 WORDS = os.path.join(FOLDER, "words.json")
-with open(WORDS, "r", encoding="utf-8") as f: words = json.load(f)
 
-
+if os.path.exists(WORDS):
+    with open(WORDS, "r", encoding="utf-8") as f:
+        try:
+            words = json.load(f)
+        except json.JSONDecodeError:
+            words={"hi":"oi"}
+else:
+    words={"hi":"oi"}
+    with open(WORDS, "w", encoding="utf-8") as f:
+        json.dump(words, f, indent=4)
 
 
 def save(word, words, forbidden, language):
